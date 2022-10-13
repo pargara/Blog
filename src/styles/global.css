@@ -63,5 +63,9 @@ blockquote {
 	color: #222;
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
-	font-style: italic;
+	font-style: Poppins, sans-serif;
+}
+#profile{
+	width: 60px;
+	height: 60px;
 }
