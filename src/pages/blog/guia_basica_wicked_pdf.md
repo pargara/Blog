@@ -77,7 +77,7 @@ para agregar un header simplemente creas un archivo en la vista del controlador 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte</title>
-    <%= wicked_pdf_stylesheet_link_tag "estudio_previo" -%>
+    <%= wicked_pdf_stylesheet_link_tag "nombre_de_las_hojas_de_estilo" -%>
 </head>
 <body>
     <div id="logo">
