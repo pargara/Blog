@@ -8,16 +8,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<img id="profile" src="/favicon.PNG" ></img>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<p>
-				Hi! I'm Sebastian Guevara currently I live in Medellin, Colombia, and I'm a 
-				Ruby on Rails developer with a year of experience (Mostly focus in Back end development)
-			</p>
+			<div class="container mx-auto grid grid-cols-2">
+				<div class="">
+					<h1 class="font-bold text-6xl mt-20">Hi! I'm Sebastian Guevara and I'm Ruby On Rails developer</h1>
+					<p class="text-lg mt-9">Mostly focuced in Back-End development but also i can take the role of a 
+						Front-End developer and always I'm lookin to create as most value as i can</p>
+				</div>
+				<img id="" src="/favicon.PNG" ></img>
+			</div>
 		</main>
 		<Footer />
 	</body>
