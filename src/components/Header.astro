@@ -2,29 +2,41 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
 ---
-
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-		<h3 id="tagline">Creating code as a craftsmanship</h3>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<!--	<HeaderLink href="/about">About</HeaderLink> -->
-		<HeaderLink href="https://twitter.com/pargara_" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/pargara" target="_blank">GitHub</HeaderLink>
-	</nav>
+<body id="navbar">
+<header aria-label="Site Header" class="bg-white w-screen" id="navbar">
+  <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-1 items-center justify-end md:justify-between">
+      <nav aria-label="Site Nav" class="hidden md:block">
+        <ul class="flex items-center gap-6 text-sm">
+          <li> 
+							<HeaderLink href="/">Home</HeaderLink>
+          </li>
+          <li>
+						<HeaderLink href="/blog">Blog</HeaderLink>
+          </li>
+					<li>
+						<HeaderLink href="/portfolio">Portfolio</HeaderLink>
+          </li>
+        </ul>
+      </nav>
+			<div class="flex items-center gap-4">
+        <div class="sm:flex sm:gap-4">
+					<HeaderLink href="https://twitter.com/pargara_" target="_blank">Twitter</HeaderLink>
+					<HeaderLink href="https://github.com/pargara" target="_blank">GitHub</HeaderLink>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3 id="tagline">Creating code as a craftsmanship</h3>
 </header>
+</body>
+
 <style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
 	#tagline{
 	color: white;
 	background-color: #004225;
+	}
+	body {
+	background-color: #f3eff5;
 	}
 </style>

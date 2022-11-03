@@ -3,14 +3,18 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+#navbar{
+	font-family: Poppins, sans-serif;
+	background-color: #f3eff5;
+}
 body {
 	font-family: Poppins, sans-serif;
-	margin: auto;
+	background-color: #f3eff5;
+	margin: auto; 
 	padding: 20px;
-	/*max-width: 65ch; */
+	max-width: 65ch;
 	max-width: 120ch;
 	text-align: left;
-	background-color: #f3eff5;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
@@ -69,4 +73,7 @@ blockquote {
 #profile{
 	width: 60px;
 	height: 60px;
+}
+.inde{
+	margin: auto !important;
 }
