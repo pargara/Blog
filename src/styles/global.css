@@ -3,11 +3,19 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-#navbar{
+
+body {
 	font-family: Poppins, sans-serif;
 	background-color: #f3eff5;
+	margin: auto; 
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: #444;
 }
-body {
+
+main{
 	font-family: Poppins, sans-serif;
 	background-color: #f3eff5;
 	margin: auto; 
@@ -19,7 +27,9 @@ body {
 	overflow-wrap: break-word;
 	line-height: 1.5;
 	color: #444;
+
 }
+
 h1,
 h2,
 h3,
