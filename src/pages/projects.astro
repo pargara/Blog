@@ -35,7 +35,7 @@ const project = (await Astro.glob('./projects/*.{md,mdx}')).sort(
 	<body>	
 		<Header title={SITE_TITLE} />
 		<main>
-			<section>
+			<!-- <section>
 				<ul>
 					{project.map((project) => (
 						<li>
@@ -50,6 +50,27 @@ const project = (await Astro.glob('./projects/*.{md,mdx}')).sort(
 						</li>
 					))}
 				</ul>
+			</section> -->
+
+			<section>
+				{project.map((project) => (
+					<article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+						<img alt={project.frontmatter.alt} src={project.frontmatter.heroImage} class="h-56 w-full object-cover"/>
+						<div class="bg-white p-4 sm:p-6">
+							<time datetime={project.frontmatter.pubDate} class="block text-xs text-gray-500">
+							{new Date(project.frontmatter.pubDate).toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric'})}
+							</time>
+							<a href={project.url}>
+								<h3 class="mt-0.5 text-lg text-gray-900">
+									{project.frontmatter.title}
+								</h3>
+							</a>
+							<p class="mt-2 text-sm leading-relaxed text-gray-500 line-clamp-3">
+							{project.frontmatter.description}
+							</p>
+						</div>
+					</article>
+				))}
 			</section>
 		</main>
 		<Footer />
