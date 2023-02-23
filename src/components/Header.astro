@@ -3,31 +3,63 @@ import '../styles/header.css';
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
 ---
+
 <body>
-<header aria-label="Site Header" class="bg-white w-screen" id="navbar">
-  <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-1 items-center justify-end md:justify-between">
-      <nav aria-label="Site Nav" class="hidden md:block">
-        <ul class="flex items-center gap-6 text-sm">
-          <li> 
-							<HeaderLink href="/">Home</HeaderLink>
-          </li>
-          <li>
-						<HeaderLink href="/blog">Blog</HeaderLink>
-          </li>
-					<li>
-						<HeaderLink href="/projects">Projectos</HeaderLink>
-          </li>
-        </ul>
-      </nav>
-			<div class="flex items-center gap-4">
-        <div class="sm:flex sm:gap-4">
-					<HeaderLink href="https://twitter.com/pargara_" target="_blank">Twitter</HeaderLink>
-					<HeaderLink href="https://github.com/pargara" target="_blank">GitHub</HeaderLink>
-				</div>
-			</div>
-		</div>
-	</div>
-	<h3 id="tagline">Creating code as a craftsmanship</h3>
-</header>
+  <header aria-label="Site Header" class="bg-white w-screen" id="navbar">
+    <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-4 sm:gap-8 px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-1 items-center justify-between">
+        <div class="flex items-center">
+          <button type="button" class="block md:hidden" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+            <span class="sr-only">Menu</span>
+            <svg class="h-6 w-6 fill-current text-gray-500" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="5" width="16" height="2" />
+              <rect x="4" y="11" width="16" height="2" />
+              <rect x="4" y="17" width="16" height="2" />
+            </svg>
+          </button>
+          <nav aria-label="Site Nav" class="hidden md:block">
+            <ul class="flex items-center gap-6 text-sm">
+              <li> 
+                <HeaderLink href="/">Home</HeaderLink>
+              </li>
+              <li>
+                <HeaderLink href="/blog">Blog</HeaderLink>
+              </li>
+              <li>
+                <HeaderLink href="/projects">Proyectos</HeaderLink>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hidden md:block flex items-center gap-4">
+          <HeaderLink href="https://twitter.com/pargara_" target="_blank">Twitter</HeaderLink>
+          <HeaderLink href="https://github.com/pargara" target="_blank">GitHub</HeaderLink>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="hidden sm:hidden" id="mobile-menu">
+    <nav class="px-2 pt-2 pb-4 space-y-1">
+      <ul class="flex flex-col">
+        <li class="my-1">
+          <HeaderLink href="/">Home</HeaderLink>
+        </li>
+        <li class="my-1">
+          <HeaderLink href="/blog">Blog</HeaderLink>
+        </li>
+        <li class="my-1">
+          <HeaderLink href="/projects">Proyectos</HeaderLink>
+        </li>
+        <li class="my-1">
+          <HeaderLink href="https://twitter.com/pargara_" target="_blank">Twitter</HeaderLink>
+        </li>
+        <li class="my-1">
+          <HeaderLink href="https://github.com/pargara" target="_blank">GitHub</HeaderLink>
+        </li>
+      </ul>
+    </nav>
+  </div>
+    <h3 id="tagline" class="text-sm text-center pt-2 sm:block">Creating code as a craftsmanship</h3>
 </body>
+
