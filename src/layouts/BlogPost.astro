@@ -22,26 +22,39 @@ const {
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
+		.title {
+			font-size: 2em;
+			margin: 0.25em 0 0;
+		}
+		hr {
+			border-top: 1px solid #DDD;
+			margin: 1rem 0;
+		}
+		body{
+			margin: auto; 
+			padding: 20px;
+			max-width: 65ch;
+			max-width: 120ch;
+			text-align: left;
+			background-color: #f3eff5;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			line-height: 1.5;
+			color: #444;
+		}
+		
+		@media only screen and (max-width: 768px) {
+			body {
+				padding: 10px;
+				max-width: 90%;
+			}
+		}
+		
+		@media only screen and (max-width: 480px) {
 			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
+				font-size: 1.5em;
 			}
-			hr {
-  				border-top: 1px solid #DDD;
-				margin: 1rem 0;
-			}
-			body{
-				margin: auto; 
-				padding: 20px;
-				max-width: 65ch;
-				max-width: 120ch;
-				text-align: left;
-				background-color: #f3eff5;
-				word-wrap: break-word;
-				overflow-wrap: break-word;
-				line-height: 1.5;
-				color: #444;
-			}
+		}
 		</style>
 	</head>
 
